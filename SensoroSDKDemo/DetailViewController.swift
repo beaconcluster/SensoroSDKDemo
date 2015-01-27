@@ -32,6 +32,7 @@ class DetailViewController: UIViewController, SBKBeaconDelegate {
         // Update the user interface for the detail item.
         if let detail: SBKBeacon = self.detailItem as? SBKBeacon {
             
+            detail.delegate = self;
             self.major!.text = NSString(format: "0x%04X", detail.beaconID!.major.integerValue);
             self.minor!.text = NSString(format: "0x%04X", detail.beaconID!.minor.integerValue);
         }
@@ -90,6 +91,24 @@ class DetailViewController: UIViewController, SBKBeaconDelegate {
     }
 
     @IBAction func resetToFactory(sender: AnyObject) {
+        if let detail: SBKBeacon = self.detailItem as? SBKBeacon {
+            
+            detail.connectWithCompletion({ (error : NSError!) -> Void in
+                if error == nil {
+                    detail.resetToFactorySettingsWithCompletion({ (error : NSError!) -> Void in
+                            if error != nil {
+                                NSLog("Erorr %@", error);
+                            }else{
+                                NSLog("Reset to factory was sccessfull!");
+                            }
+                            detail.disconnect();
+                    })
+                }else{
+                    NSLog("Erorr %@", error);
+                    detail.disconnect();
+                }
+            });
+        }
     }
     
     // MARK: - SBKBeaconDelegate

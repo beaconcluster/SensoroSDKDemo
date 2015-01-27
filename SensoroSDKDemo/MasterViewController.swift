@@ -43,12 +43,6 @@ class MasterViewController: UITableViewController, SBKBeaconManagerDelegate {
         // Dispose of any resources that can be recreated.
     }
 
-//    func insertNewObject(sender: AnyObject) {
-//        beacons.insertObject(NSDate(), atIndex: 0)
-//        let indexPath = NSIndexPath(forRow: 0, inSection: 0)
-//        self.tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
-//    }
-
     // MARK: - Segues
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showDetail" {
@@ -60,7 +54,6 @@ class MasterViewController: UITableViewController, SBKBeaconManagerDelegate {
     }
 
     // MARK: - Table View
-
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
@@ -85,10 +78,6 @@ class MasterViewController: UITableViewController, SBKBeaconManagerDelegate {
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         self.performSegueWithIdentifier("showDetail", sender: self);
     }
-//    
-//    override func tableView(tableView: UITableView, didUnhighlightRowAtIndexPath indexPath: NSIndexPath) {
-//        self.performSegueWithIdentifier("showDetail", sender: self);
-//    }
 
 //    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
 //        // Return false if you do not want the specified item to be editable.
@@ -125,8 +114,6 @@ class MasterViewController: UITableViewController, SBKBeaconManagerDelegate {
     func beaconManager(beaconManager: SBKBeaconManager!, scanDidFinishWithBeacons beacons: [AnyObject]!) {
         self.tableView.reloadRowsAtIndexPaths(self.tableView.indexPathsForVisibleRows()!,
             withRowAnimation: .None);
-        
-        //self.tableView.reloadData();
     }
     
     
