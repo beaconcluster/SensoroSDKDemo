@@ -12,8 +12,11 @@
 		634CA8B71A75E17700E2EF2E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634CA8B61A75E17700E2EF2E /* DetailViewController.swift */; };
 		634CA8BA1A75E17700E2EF2E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 634CA8B81A75E17700E2EF2E /* Main.storyboard */; };
 		634CA8BC1A75E17700E2EF2E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 634CA8BB1A75E17700E2EF2E /* Images.xcassets */; };
-		634CA8BF1A75E17700E2EF2E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 634CA8BD1A75E17700E2EF2E /* LaunchScreen.xib */; };
 		634CA8CB1A75E17700E2EF2E /* SensoroSDKDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634CA8CA1A75E17700E2EF2E /* SensoroSDKDemoTests.swift */; };
+		634CA8DC1A75E26C00E2EF2E /* libSensoroBeaconKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 634CA8DB1A75E26C00E2EF2E /* libSensoroBeaconKit.a */; };
+		634CA8E01A75E37300E2EF2E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 634CA8DF1A75E37300E2EF2E /* Default-568h@2x.png */; };
+		634CA8E21A75F7DF00E2EF2E /* BeaconCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 634CA8E11A75F7DF00E2EF2E /* BeaconCell.xib */; };
+		634CA8E41A75F84600E2EF2E /* BeaconCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634CA8E31A75F84600E2EF2E /* BeaconCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,10 +37,19 @@
 		634CA8B61A75E17700E2EF2E /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		634CA8B91A75E17700E2EF2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		634CA8BB1A75E17700E2EF2E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		634CA8BE1A75E17700E2EF2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		634CA8C41A75E17700E2EF2E /* SensoroSDKDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SensoroSDKDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		634CA8C91A75E17700E2EF2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		634CA8CA1A75E17700E2EF2E /* SensoroSDKDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensoroSDKDemoTests.swift; sourceTree = "<group>"; };
+		634CA8D61A75E26C00E2EF2E /* SBKBeacon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBKBeacon.h; sourceTree = "<group>"; };
+		634CA8D71A75E26C00E2EF2E /* SBKBeaconID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBKBeaconID.h; sourceTree = "<group>"; };
+		634CA8D81A75E26C00E2EF2E /* SBKBeaconManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBKBeaconManager.h; sourceTree = "<group>"; };
+		634CA8D91A75E26C00E2EF2E /* SBKConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBKConstants.h; sourceTree = "<group>"; };
+		634CA8DA1A75E26C00E2EF2E /* SBKError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBKError.h; sourceTree = "<group>"; };
+		634CA8DB1A75E26C00E2EF2E /* libSensoroBeaconKit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSensoroBeaconKit.a; sourceTree = "<group>"; };
+		634CA8DE1A75E32F00E2EF2E /* SensoroSDKDemo_Bridge_Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SensoroSDKDemo_Bridge_Header.h; sourceTree = "<group>"; };
+		634CA8DF1A75E37300E2EF2E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		634CA8E11A75F7DF00E2EF2E /* BeaconCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BeaconCell.xib; sourceTree = "<group>"; };
+		634CA8E31A75F84600E2EF2E /* BeaconCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				634CA8DC1A75E26C00E2EF2E /* libSensoroBeaconKit.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +74,7 @@
 		634CA8A41A75E17700E2EF2E = {
 			isa = PBXGroup;
 			children = (
+				634CA8DF1A75E37300E2EF2E /* Default-568h@2x.png */,
 				634CA8AF1A75E17700E2EF2E /* SensoroSDKDemo */,
 				634CA8C71A75E17700E2EF2E /* SensoroSDKDemoTests */,
 				634CA8AE1A75E17700E2EF2E /* Products */,
@@ -79,13 +93,16 @@
 		634CA8AF1A75E17700E2EF2E /* SensoroSDKDemo */ = {
 			isa = PBXGroup;
 			children = (
+				634CA8D41A75E26C00E2EF2E /* SensoroSDK */,
 				634CA8B21A75E17700E2EF2E /* AppDelegate.swift */,
 				634CA8B41A75E17700E2EF2E /* MasterViewController.swift */,
 				634CA8B61A75E17700E2EF2E /* DetailViewController.swift */,
+				634CA8E11A75F7DF00E2EF2E /* BeaconCell.xib */,
 				634CA8B81A75E17700E2EF2E /* Main.storyboard */,
 				634CA8BB1A75E17700E2EF2E /* Images.xcassets */,
-				634CA8BD1A75E17700E2EF2E /* LaunchScreen.xib */,
 				634CA8B01A75E17700E2EF2E /* Supporting Files */,
+				634CA8DE1A75E32F00E2EF2E /* SensoroSDKDemo_Bridge_Header.h */,
+				634CA8E31A75F84600E2EF2E /* BeaconCell.swift */,
 			);
 			path = SensoroSDKDemo;
 			sourceTree = "<group>";
@@ -113,6 +130,27 @@
 				634CA8C91A75E17700E2EF2E /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		634CA8D41A75E26C00E2EF2E /* SensoroSDK */ = {
+			isa = PBXGroup;
+			children = (
+				634CA8D51A75E26C00E2EF2E /* Headers */,
+				634CA8DB1A75E26C00E2EF2E /* libSensoroBeaconKit.a */,
+			);
+			path = SensoroSDK;
+			sourceTree = SOURCE_ROOT;
+		};
+		634CA8D51A75E26C00E2EF2E /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				634CA8D61A75E26C00E2EF2E /* SBKBeacon.h */,
+				634CA8D71A75E26C00E2EF2E /* SBKBeaconID.h */,
+				634CA8D81A75E26C00E2EF2E /* SBKBeaconManager.h */,
+				634CA8D91A75E26C00E2EF2E /* SBKConstants.h */,
+				634CA8DA1A75E26C00E2EF2E /* SBKError.h */,
+			);
+			path = Headers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,7 +198,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0610;
-				ORGANIZATIONNAME = Sensoro;
+				ORGANIZATIONNAME = beaconcluster;
 				TargetAttributes = {
 					634CA8AC1A75E17700E2EF2E = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -196,8 +234,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				634CA8BA1A75E17700E2EF2E /* Main.storyboard in Resources */,
-				634CA8BF1A75E17700E2EF2E /* LaunchScreen.xib in Resources */,
 				634CA8BC1A75E17700E2EF2E /* Images.xcassets in Resources */,
+				634CA8E01A75E37300E2EF2E /* Default-568h@2x.png in Resources */,
+				634CA8E21A75F7DF00E2EF2E /* BeaconCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,6 +257,7 @@
 				634CA8B71A75E17700E2EF2E /* DetailViewController.swift in Sources */,
 				634CA8B51A75E17700E2EF2E /* MasterViewController.swift in Sources */,
 				634CA8B31A75E17700E2EF2E /* AppDelegate.swift in Sources */,
+				634CA8E41A75F84600E2EF2E /* BeaconCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,14 +286,6 @@
 				634CA8B91A75E17700E2EF2E /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		634CA8BD1A75E17700E2EF2E /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				634CA8BE1A75E17700E2EF2E /* Base */,
-			);
-			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -341,8 +373,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SensoroSDKDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SensoroSDK",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = ./SensoroSDKDemo/SensoroSDKDemo_Bridge_Header.h;
 			};
 			name = Debug;
 		};
@@ -351,8 +389,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SensoroSDKDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SensoroSDK",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = ./SensoroSDKDemo/SensoroSDKDemo_Bridge_Header.h;
 			};
 			name = Release;
 		};
